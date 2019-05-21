@@ -104,7 +104,11 @@ class DoublyLinkedList:
 
 
   def move_to_front(self, node):
-    pass
+    node.delete()
+
+    self.head.insert_before(node.value)
+
+    self.head = self.head.prev
 
   def move_to_end(self, node):
     pass
